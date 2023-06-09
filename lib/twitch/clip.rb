@@ -37,5 +37,9 @@ module Twitch
         instance_variable_set "@#{key}", value
       end
     end
+
+    def video_url
+      self.thumbnail_url.split('-preview')[0] + '.mp4'
+    end
   end
 end
